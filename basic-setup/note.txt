@@ -1,0 +1,2 @@
+the ts code is first converted into js after that the browser can understand it so that if we ever made a change on our ts file we have to compile the file again to get the updated result.
+by using lite-server we dont need to restart or refresh the server everytime we made change on our file. it will automatically reflects the changes on the screen after we compiling the ts file.
