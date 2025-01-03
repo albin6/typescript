@@ -430,45 +430,270 @@
 // Call function getArray()
 // Call function addArray()
 // Call function displayArray()
-function main() {
-    var arr1 = [];
-    var arr2 = [];
-    getArray(arr1, arr2);
-    var sum = addArray(arr1, arr2);
-    displayArray(sum);
-}
-function getArray(nums1, nums2) {
-    var size = Number(prompt("Enter matrix size :"));
-    for (var i = 0; i < size; i++) {
-        nums1[i] = [];
-        for (var j = 0; j < size; j++) {
-            nums1[i][j] = Number(prompt("Enter ".concat(i + 1, " ").concat(j + 1, " th element to array 1 :")));
-        }
+// function main() {
+//   const arr1: number[][] = [];
+//   const arr2: number[][] = [];
+//   getArray(arr1, arr2);
+//   const sum = addArray(arr1, arr2);
+//   displayArray(sum);
+// }
+// function getArray(nums1: number[][], nums2: number[][]) {
+//   const size = Number(prompt("Enter matrix size :"));
+//   for (let i = 0; i < size; i++) {
+//     nums1[i] = [];
+//     for (let j = 0; j < size; j++) {
+//       nums1[i][j] = Number(
+//         prompt(`Enter ${i + 1} ${j + 1} th element to array 1 :`)
+//       );
+//     }
+//   }
+//   for (let i = 0; i < size; i++) {
+//     nums2[i] = [];
+//     for (let j = 0; j < size; j++) {
+//       nums2[i][j] = Number(
+//         prompt(`Enter ${i + 1} ${j + 1} th element to array 2 :`)
+//       );
+//     }
+//   }
+// }
+// function addArray(nums1: number[][], nums2: number[][]): number[][] {
+//   const sum: number[][] = [];
+//   for (let i = 0; i < nums1.length; i++) {
+//     sum[i] = [];
+//     for (let j = 0; j < nums1.length; j++) {
+//       sum[i][j] = nums1[i][j] + nums2[i][j];
+//     }
+//   }
+//   return sum;
+// }
+// function displayArray(sum: number[][]) {
+//   for (let i = 0; i < sum.length; i++) {
+//     let row = "";
+//     for (let j = 0; j < sum.length; j++) {
+//       row += sum[i][j] + " ";
+//     }
+//     console.log(row);
+//   }
+// }
+// main();
+// Write an object oriented program to store and display the values of a 2D array
+// Program should contains 3 functions including the main function
+// main()
+// Declare an array
+// Call function getArray()
+// Call function displayArray()
+// class MultiDimentionalArray {
+//   constructor() {
+//     this.main();
+//   }
+//   main() {
+//     const arr: number[] = [];
+//     this.getArray(arr);
+//     this.displayArray(arr);
+//   }
+//   getArray(arr: number[]): void {
+//     const size = Number(prompt("Enter matrix size :"));
+//     for (let j = 0; j < size; j++) {
+//       arr[j] = Number(prompt(`Enter ${j + 1} th element to array :`));
+//     }
+//   }
+//   displayArray(arr: number[]): void {
+//     let row = "";
+//     for (let j = 0; j < arr.length; j++) {
+//       row += arr[j] + " ";
+//     }
+//     console.log(row);
+//   }
+// }
+// new MultiDimentionalArray();
+// Write a menu driven program to calculate the area of a given object.
+// Program should contain two classes
+// Class 1: MyClass
+// Class 2: Area
+// Class MyClass should inherit class Area and should contain the following functions
+// main()
+// circle()
+// square()
+// rectangle()
+// triangle()
+// Class Area should contain the following functions to calculate the area of different objects
+// circle()
+// square()
+// rectangle()
+// triangle()
+// class Area {
+//   circle() {
+//     const radius = Number(prompt("Enter the radius :"));
+//     console.log("Area of circle :", 3.14 * radius ** 2);
+//   }
+//   square() {
+//     const side = Number(prompt("Enter side of square"));
+//     console.log("Area of square is :", side * side);
+//   }
+//   rectangle() {
+//     const length = Number(prompt("Enter length of rectangle"));
+//     const bradth = Number(prompt("Enter bradth of rectangle"));
+//     console.log("Area of rectangle :", length * bradth);
+//   }
+//   triangle() {
+//     const base = Number(prompt("Enter base of triangle"));
+//     const height = Number(prompt("Enter height of triangle"));
+//     console.log("Area of triangle is : ", (base * height) / 2);
+//   }
+// }
+// class MyClass extends Area {
+//   constructor() {
+//     super();
+//     this.main();
+//   }
+//   main() {
+//     const ch: number = Number(
+//       prompt(`
+//         Enter Your Choice;
+//         1) Circle
+//         2) Square
+//         3) Rectangle
+//         4) Triangle
+//         `)
+//     );
+//     switch (ch) {
+//       case 1:
+//         this.circle();
+//         break;
+//       case 2:
+//         this.square();
+//         break;
+//       case 3:
+//         this.rectangle();
+//         break;
+//       case 4:
+//         this.triangle();
+//         break;
+//       default:
+//         break;
+//     }
+//   }
+// }
+// new MyClass();
+// interface Book {
+//   title: string;
+//   author: string;
+//   readingStatus: boolean;
+// }
+// const library: Book[] = [
+//   {
+//     title: "The Road Ahead",
+//     author: "Bill Gates",
+//     readingStatus: true,
+//   },
+//   {
+//     title: "Walter Isaacson",
+//     author: "Steve Jobs",
+//     readingStatus: true,
+//   },
+//   {
+//     title: "Mockingjay: The Final Book of The Hunger Games",
+//     author: "Suzanne Collins",
+//     readingStatus: false,
+//   },
+// ];
+// function displayBookStatus(library: Book[]): void {
+//   library.forEach((book) => {
+//     if (book.readingStatus) {
+//       console.log(`Already read '${book.title}' by ${book.author}.`);
+//     } else {
+//       console.log(`You still need to read '${book.title}' by ${book.author}.`);
+//     }
+//   });
+// }
+// displayBookStatus(library);
+// function reverseString(my_string: any): void {
+//   try {
+//     const reversedString = my_string.split("").reverse().join("");
+//     console.log(`Reversed string is : ${reversedString}`);
+//   } catch (err) {
+//     console.log(`Error : ${err.message}`);
+//   } finally {
+//     console.log(`Type of my_string is : ${typeof my_string}`);
+//   }
+// }
+// reverseString("1234");
+// reverseString(Number(1234));
+// function validateHeight(my_height: any): void {
+//   try {
+//     if (isNaN(my_height)) {
+//       throw new Error("notANumberError");
+//     }
+//     const height = Number(my_height);
+//     if (height > 76) {
+//       throw new Error("hugeHeightError");
+//     } else if (height < 1) {
+//       throw new Error("tinyHeightError");
+//     }
+//     console.log(height);
+//   } catch (err: any) {
+//     console.log(err.message);
+//   }
+// }
+// validateHeight("seven");
+// validateHeight(77);
+// validateHeight(0);
+// validateHeight(8);
+// class Car {
+//   name: string;
+//   mileage: number;
+//   max_speed: number;
+//   constructor(name: string, mileage: number, max_speed: number) {
+//     this.name = name;
+//     this.mileage = mileage;
+//     this.max_speed = max_speed;
+//   }
+// }
+// const car1 = new Car("Tesla Model S", 250, 200);
+// const car2 = new Car("Ford Mustang", 150, 180);
+// console.log(
+//   `Car 1: ${car1.name}, Mileage: ${car1.mileage}, Max Speed: ${car1.max_speed}`
+// );
+// console.log(
+//   `Car 2: ${car2.name}, Mileage: ${car2.mileage}, Max Speed: ${car2.max_speed}`
+// );
+// function myFilter(
+//   myArray: number[],
+//   callback: (num: number) => boolean
+// ): number {
+//   let sum = myArray.reduce((acc, num) => acc + num, 0);
+//   callback(sum);
+//   return sum;
+// }
+// function isEvenOrOdd(num: number): boolean {
+//   if (num % 2 === 0) {
+//     console.log("The sum is even.");
+//     return true;
+//   } else {
+//     console.log("The sum is odd.");
+//     return false;
+//   }
+// }
+// const input = "12345";
+// const myArray = input.split("").map(Number);
+// const result = myFilter(myArray, isEvenOrOdd);
+// console.log(result);
+function calculateIncomeTax(annualIncome) {
+    var tax = 0;
+    if (annualIncome <= 250000) {
+        tax = 0;
     }
-    for (var i = 0; i < size; i++) {
-        nums2[i] = [];
-        for (var j = 0; j < size; j++) {
-            nums2[i][j] = Number(prompt("Enter ".concat(i + 1, " ").concat(j + 1, " th element to array 2 :")));
-        }
+    else if (annualIncome > 250000 && annualIncome <= 500000) {
+        tax = (annualIncome - 250000) * 0.05;
     }
-}
-function addArray(nums1, nums2) {
-    var sum = [];
-    for (var i = 0; i < nums1.length; i++) {
-        sum[i] = [];
-        for (var j = 0; j < nums1.length; j++) {
-            sum[i][j] = nums1[i][j] + nums2[i][j];
-        }
+    else if (annualIncome > 500000 && annualIncome <= 1000000) {
+        tax = 250000 * 0.05 + (annualIncome - 500000) * 0.2;
     }
-    return sum;
-}
-function displayArray(sum) {
-    for (var i = 0; i < sum.length; i++) {
-        var row = "";
-        for (var j = 0; j < sum.length; j++) {
-            row += sum[i][j] + " ";
-        }
-        console.log(row);
+    else if (annualIncome > 1000000) {
+        tax = 250000 * 0.05 + 500000 * 0.2 + (annualIncome - 1000000) * 0.3;
     }
+    return tax;
 }
-main();
+var annualIncomeInput = 495000;
+var taxAmount = calculateIncomeTax(annualIncomeInput);
+console.log("Income tax amount = ".concat(taxAmount.toFixed(2)));
