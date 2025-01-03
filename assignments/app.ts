@@ -316,3 +316,251 @@
 // }
 
 // getString();
+
+// Write a program to add to two dimensional arrays
+// Program should accept two 2D arrays and display its sum
+
+// function getArrays() {
+//   const nums1: number[][] = [];
+//   const nums2: number[][] = [];
+//   const size = Number(prompt("Enter matrix size :"));
+//   for (let i = 0; i < size; i++) {
+//     nums1[i] = [];
+//     for (let j = 0; j < size; j++) {
+//       nums1[i][j] = Number(
+//         prompt(`Enter ${i + 1} ${j + 1} th element to array 1 :`)
+//       );
+//     }
+//   }
+
+//   for (let i = 0; i < size; i++) {
+//     nums2[i] = [];
+//     for (let j = 0; j < size; j++) {
+//       nums2[i][j] = Number(
+//         prompt(`Enter ${i + 1} ${j + 1} th element to array 2 :`)
+//       );
+//     }
+//   }
+//   findSum(nums1, nums2, size);
+// }
+
+// function findSum(nums1: number[][], nums2: number[][], size: number) {
+//   const sum: number[][] = [];
+//   for (let i = 0; i < size; i++) {
+//     sum[i] = [];
+//     for (let j = 0; j < size; j++) {
+//       sum[i][j] = nums1[i][j] + nums2[i][j];
+//     }
+//   }
+//   for (let i = 0; i < size; i++) {
+//     let row = "";
+//     for (let j = 0; j < size; j++) {
+//       row += sum[i][j] + " ";
+//     }
+//     console.log(row);
+//   }
+// }
+
+// getArrays();
+
+// Write a program to accept an array and display it on the console using functions
+// Program should contain 3 functions including main() function
+
+// function main() {
+//   const num: number[] = [];
+//   getArray(num);
+//   displayArray(num);
+// }
+
+// function getArray(num: number[]) {
+//   const size = Number(prompt("Enter size of array :"));
+//   for (let i = 0; i < size; i++) {
+//     num[i] = Number(prompt("Enter element :"));
+//   }
+// }
+
+// function displayArray(num: number[]) {
+//   let str = "";
+//   for (let i = 0; i < num.length; i++) {
+//     str += num[i] + " ";
+//   }
+//   console.log(str);
+// }
+
+// main();
+
+// Write a program to check whether a given number is prime or not
+// Program should accept an input from the user and display whether the number is prime or not
+
+// function isPalindrome(num: number): boolean {
+//   return num.toString() === num.toString().split("").reverse().join("");
+// }
+
+// console.log(isPalindrome(10));
+// console.log(isPalindrome(101));
+
+// Write a menu driven program to do the basic mathematical operations such as addition, subtraction, multiplication and division (hint: use if else ladder or switch)
+// Program should have 4 functions named addition(), subtraction(), multiplication() and division()
+// Should create a class object and call the appropriate function as user prefers in the main function
+
+// class MathematicalOpr {
+//   private num1: number;
+//   private num2: number;
+//   private operation: string;
+//   constructor() {
+//     this.main();
+//   }
+//   main() {
+//     this.num1 = Number(prompt("Enter number 1"));
+//     this.num2 = Number(prompt("Enter number 2"));
+//     this.operation = prompt(
+//       "1) Addition \n 2) Subtraction \n 3) Multiplication \n 4) Division"
+//     )!;
+
+//     switch (this.operation) {
+//       case "1":
+//         this.add(this.num1, this.num2);
+//         break;
+//       case "2":
+//         this.subtract(this.num1, this.num2);
+//         break;
+//       case "3":
+//         this.multiply(this.num1, this.num2);
+//         break;
+//       case "4":
+//         this.divide(this.num1, this.num2);
+//         break;
+//       default:
+//         console.log("Invalid operation");
+//         break;
+//     }
+//   }
+//   add(num1: number, num2: number) {
+//     console.log(num1, " + ", num2, " = ", num1 + num2);
+//   }
+//   subtract(num1: number, num2: number) {
+//     console.log(num1, " - ", num2, " = ", num1 - num2);
+//   }
+//   divide(num1: number, num2: number) {
+//     console.log(num1, " / ", num2, " = ", num1 / num2);
+//   }
+//   multiply(num1: number, num2: number) {
+//     console.log(num1, " x ", num2, " = ", num1 * num2);
+//   }
+// }
+
+// new MathematicalOpr();
+
+// Grades are computed using a weighted average. Suppose that the written test counts 70%,  lab exams 20% and assignments 10%.
+// If Arun has a score of
+// Written test = 81
+// Lab exams = 68
+// Assignments = 92
+// Arun’s overall grade = (81x70)/100 + (68x20)/100 + (92x10)/100 = 79.5
+
+// function computeWeighterAvg() {
+//   const writtenTest = Number(prompt("Enter score in written test"));
+//   const lab = Number(prompt("Enter score in lab exams"));
+//   const assignments = Number(prompt("Enter score in assignments"));
+
+//   console.log(
+//     "Overall grade =>",
+//     (writtenTest * 70) / 100 + (lab * 20) / 100 + (assignments * 10) / 100
+//   );
+// }
+
+// computeWeighterAvg();
+
+// Write a program to print the following pattern using for loop
+// 1
+// 2	3
+// 4	5	6
+// 7	8	9	10
+
+// function printPattern() {
+//   let count = 1;
+//   for (let i = 0; i < 4; i++) {
+//     let str = "";
+//     for (let j = 0; j <= i; j++) {
+//       str += count + " ";
+//       count++;
+//     }
+//     console.log(str);
+//   }
+// }
+
+// printPattern();
+
+// Write a program to multiply the adjacent values of an array and store it in an another array
+// Program should accept an array
+// Multiply the adjacent values
+// Store the result into another array
+
+// function test(nums: number[]) {
+//   const result: number[] = [];
+//   for (let i = 0; i < nums.length - 1; i++) {
+//     result.push(nums[i] * nums[i + 1]);
+//   }
+//   console.log(JSON.stringify(result));
+// }
+
+// test([1, 2, 3, 4, 5]);
+
+// Write a program to add the values of two 2D arrays
+// Program should contains 3 functions including the main function
+// main()
+// Call function getArray()
+// Call function addArray()
+// Call function displayArray()
+
+// function main() {
+//   const arr1: number[][] = [];
+//   const arr2: number[][] = [];
+//   getArray(arr1, arr2);
+//   const sum = addArray(arr1, arr2);
+//   displayArray(sum);
+// }
+
+// function getArray(nums1: number[][], nums2: number[][]) {
+//   const size = Number(prompt("Enter matrix size :"));
+//   for (let i = 0; i < size; i++) {
+//     nums1[i] = [];
+//     for (let j = 0; j < size; j++) {
+//       nums1[i][j] = Number(
+//         prompt(`Enter ${i + 1} ${j + 1} th element to array 1 :`)
+//       );
+//     }
+//   }
+
+//   for (let i = 0; i < size; i++) {
+//     nums2[i] = [];
+//     for (let j = 0; j < size; j++) {
+//       nums2[i][j] = Number(
+//         prompt(`Enter ${i + 1} ${j + 1} th element to array 2 :`)
+//       );
+//     }
+//   }
+// }
+
+// function addArray(nums1: number[][], nums2: number[][]): number[][] {
+//   const sum: number[][] = [];
+//   for (let i = 0; i < nums1.length; i++) {
+//     sum[i] = [];
+//     for (let j = 0; j < nums1.length; j++) {
+//       sum[i][j] = nums1[i][j] + nums2[i][j];
+//     }
+//   }
+//   return sum;
+// }
+
+// function displayArray(sum: number[][]) {
+//   for (let i = 0; i < sum.length; i++) {
+//     let row = "";
+//     for (let j = 0; j < sum.length; j++) {
+//       row += sum[i][j] + " ";
+//     }
+//     console.log(row);
+//   }
+// }
+
+// main();
